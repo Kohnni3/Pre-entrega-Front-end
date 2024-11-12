@@ -1,0 +1,125 @@
+
+header {
+
+    position: relative;
+    font-size: 1.2rem;
+}
+
+body {
+    background-image: url(/imagenes/Fondo-pag.png)
+}
+
+.container-fluid {
+    min-height: 80px;
+}
+
+
+.container {
+    background-color:#FFCBBD;
+}
+
+.parrafo {
+    font-family: 'Playfair Display', serif;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+}
+.card {
+   width: 18rem;
+   background-color: #FFCBBD;
+   height: 30rem;
+}
+p.card-text {
+    font-family: 'Playfair Display',serif;
+}
+
+.btn {
+   background-color: beige;
+   color: grey;
+   font-family: 'DM Serif Display';
+}
+
+
+
+#logo {
+    background-image: url(/imagenes/logo.png);
+    font-size: 0;
+    width: 120px;
+    height: 120px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.pastilla {
+    font-family:  'Playfair Display',serif; ;
+}
+
+ h3 {
+    font-family: 'DM Serif Display';
+    color: grey;
+}
+
+.navbar {
+    background-color: #FFCBBD;
+}
+ 
+@media screen and (max-width: 991px){
+    #logo {
+        left: calc(50% - 20px);
+    }
+}
+
+footer {
+    background-color: #F2E3D9;;
+}
+
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 15vw;
+    max-width: 275px;
+    min-width: 115px;
+    height: 15vw;
+    min-height: 115px;
+    max-height: 275px;
+    margin: 15px auto;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
