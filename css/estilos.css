@@ -6,7 +6,7 @@ header {
 }
 
 body {
-    background-image: url(imagenes/Fondo-pag.png)
+    background-image: url(../imagenes/Fondo-pag.png)
 }
 
 .container-fluid {
@@ -43,7 +43,7 @@ p.card-text {
 
 
 #logo {
-    background-image: url(imagenes/logo.png);
+    background-image: url(../imagenes/logo.png);
     font-size: 0;
     width: 120px;
     height: 120px;
