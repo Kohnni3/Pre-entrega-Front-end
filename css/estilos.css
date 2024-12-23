@@ -41,7 +41,24 @@ p.card-text {
 }
 
 
-
+.carrito-icono {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .carrito-icono img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+  }
+  
+  .carrito-icono img:hover {
+    transform: scale(1.1);
+  }
+  
 #logo {
     background-image: url(../imagenes/logo.png);
     font-size: 0;
