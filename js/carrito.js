@@ -5,7 +5,8 @@ const vaciarCarrito = document.getElementById("vaciar-carrito");
 const finalizarCompra = document.getElementById("finalizar-compra");
 
 function mostrarCarrito() {
-  carritoContainer.innerHTML = "";
+  carritoContainer.innerHTML = '<ul class="list-group"></ul>';
+  const lista = carritoContainer.querySelector(".list-group");
   let total = 0;
 
   carrito.forEach((item, index) => {
@@ -13,23 +14,19 @@ function mostrarCarrito() {
     total += item.precio;
 
     const itemHtml = `
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="${item.imagen}" class="img-fluid rounded-start" alt="${item.nombre}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">${item.nombre}</h5>
-              <p class="card-text">Sabores: ${sabores}</p>
-              <p class="card-text fw-bold">$${item.precio}</p>
-              <button class="btn btn-danger btn-sm eliminar-item" data-index="${index}">Eliminar</button>
-            </div>
+      <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 mb-3 shadow-sm rounded">
+        <div class="d-flex align-items-center">
+          <img src="${item.imagen}" alt="${item.nombre}" class="img-fluid rounded me-3" style="max-width: 50px; max-height: 50px;">
+          <div>
+            <h5 class="mb-1">${item.nombre}</h5>
+            <p class="mb-1 text-muted">Sabores: ${sabores}</p>
+            <span class="fw-bold">$${item.precio}</span>
           </div>
         </div>
-      </div>
+        <button class="btn btn-danger btn-sm eliminar-item" data-index="${index}">Eliminar</button>
+      </li>
     `;
-    carritoContainer.innerHTML += itemHtml;
+    lista.innerHTML += itemHtml;
   });
 
   totalPrecio.textContent = total;
@@ -42,6 +39,7 @@ function mostrarCarrito() {
     });
   });
 }
+
 vaciarCarrito.addEventListener("click", () => {
   localStorage.removeItem("carrito");
   location.reload();

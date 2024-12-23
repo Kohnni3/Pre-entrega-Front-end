@@ -16,7 +16,7 @@ const productos = [
  
   productos.forEach((producto, index) => {
     const card = `
-      <div class="col-md-6 col-lg-5 col-xl-3 d-inline-flex py-3 ps-3 flex-md-row justify-content-center">
+      <div class="col-md-6 col-xl-3 d-inline-flex py-3 ps-3 flex-md-row justify-content-center">
         <div class="card mb-4">
           <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
           <div class="card-body">

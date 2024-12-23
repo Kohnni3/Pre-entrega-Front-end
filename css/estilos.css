@@ -1,4 +1,7 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
 header {
 
     position: relative;
@@ -7,6 +10,7 @@ header {
 
 body {
     background-image: url(../imagenes/Fondo-pag.png)
+
 }
 
 .container-fluid {
@@ -41,7 +45,7 @@ p.card-text {
 }
 
 
-.carrito-icono {
+#carrito-icono {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -49,13 +53,13 @@ p.card-text {
     cursor: pointer;
   }
   
-  .carrito-icono img {
-    width: 40px;
-    height: 40px;
+#carrito-icono img {
+    width: 50px;
+    height: 50px;
     transition: transform 0.2s ease;
   }
   
-  .carrito-icono img:hover {
+#carrito-icono img:hover {
     transform: scale(1.1);
   }
   
